@@ -1,0 +1,23 @@
+Unnamed: 0,Unnamed: 1,TOTAL SALES,Unnamed: 3,Unnamed: 4,Unnamed: 5,Unnamed: 6,Unnamed: 7
+,,9065728.639999999,,,,,N Codes
+ItemSalesClassCode,(All),,,,,ItemCode,(Multiple Items)
+ItemCode,(All),,,,,ItemSalesClassCode,(All)
+,,,,,,,
+Sum of ExtendedLineAmount,,,,,,N Code Sales,
+Years (ScheduledShipDate),Months (ScheduledShipDate),ScheduledShipDate,Total,,,ScheduledShipDate,Total
+1900,Jan,,465850.23,,,1900-01-02 00:00:00,17822
+1900 Total,,,465850.23,,,2026-10-01 00:00:00,13339.02
+2026,Feb,,1189209.3799999994,,,2026-02-27 00:00:00,4755.79
+,Mar,,2106445.25,,,2026-04-01 00:00:00,54691
+,Apr,,1598583.05,,,2026-04-30 00:00:00,250
+,May,,1038408.26,,,2026-03-13 00:00:00,6700
+,Jun,,230497,,,Grand Total,97557.81
+,Jul,,376891,,,,
+,Aug,,253135.5,,,,
+,Sep,,129838,,,,
+,Oct,,225388.52000000002,,,,
+,Nov,,300112.02000000014,,,,
+,Dec,,1092927.4299999985,,,,
+2026 Total,,,8541435.409999998,,,,
+2027,,,58443,,,,
+Grand Total,,,9065728.639999999,,,,
