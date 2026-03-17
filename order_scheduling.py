@@ -5,7 +5,7 @@ from datetime import datetime, timedelta
 import os
 
 # ── Configuration ──────────────────────────────────────────────────────────
-MFG_START_DATE = pd.Timestamp(datetime.today().date())  # default: today, change for what-if scenarios
+MFG_START_DATE = pd.Timestamp("2026-02-25")  # backlog report date
 BASE = "Manufacturing Data CSVs"
 RAW_DATA = os.path.join(BASE, "Copy of Backlog Report   02 25 2026_Raw_data_w_lookup.csv")
 LEAD_TIME = os.path.join(BASE, "lead_time.csv")

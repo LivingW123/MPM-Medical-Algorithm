@@ -23,7 +23,7 @@ import os
 from order_scheduling import load_and_clean_data, join_data
 
 # ── Configuration ─────────────────────────────────────────────────────────
-TODAY = pd.Timestamp(datetime.today().date())
+TODAY = pd.Timestamp("2026-02-25")  # backlog report date
 BASE = "Manufacturing Data CSVs"
 OUTPUT_CSV = os.path.join(BASE, "batch_schedule_feasibility.csv")
 OUTPUT_PNG = os.path.join(BASE, "batch_vs_naive_comparison.png")
