@@ -25,8 +25,9 @@ from order_scheduling import load_and_clean_data, join_data
 # ── Configuration ─────────────────────────────────────────────────────────
 TODAY = pd.Timestamp("2026-02-25")  # backlog report date
 BASE = "Manufacturing Data CSVs"
-OUTPUT_CSV = os.path.join(BASE, "batch_schedule_feasibility.csv")
-OUTPUT_PNG = os.path.join(BASE, "batch_vs_naive_comparison.png")
+OUTPUT_DIR = "Automation Output"
+OUTPUT_CSV = os.path.join(OUTPUT_DIR, "batch_schedule_feasibility.csv")
+OUTPUT_PNG = os.path.join(OUTPUT_DIR, "batch_vs_naive_comparison.png")
 
 # Cost model parameters (tunable)
 LATE_PENALTY_PER_DAY = 0.02       # 2% of line profit lost per day late

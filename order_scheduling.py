@@ -10,8 +10,9 @@ BASE = "Manufacturing Data CSVs"
 RAW_DATA = os.path.join(BASE, "Copy of Backlog Report   02 25 2026_Raw_data_w_lookup.csv")
 LEAD_TIME = os.path.join(BASE, "lead_time.csv")
 COST_SHEET = os.path.join(BASE, "Copy of Backlog Report   02 25 2026_Cost_sheet.csv")
-OUTPUT_CSV = os.path.join(BASE, "order_schedule_feasibility.csv")
-OUTPUT_PNG = os.path.join(BASE, "monthly_revenue_projection.png")
+OUTPUT_DIR = "Automation Output"
+OUTPUT_CSV = os.path.join(OUTPUT_DIR, "order_schedule_feasibility.csv")
+OUTPUT_PNG = os.path.join(OUTPUT_DIR, "monthly_revenue_projection.png")
 
 SENTINEL_DATE = pd.Timestamp("1900-01-02")
 DEFAULT_LEAD_TIME = 30  # fallback days for items missing lead time data
