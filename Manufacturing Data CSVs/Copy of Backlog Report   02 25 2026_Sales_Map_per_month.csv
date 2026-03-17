@@ -1,9 +1,3 @@
-Unnamed: 0,Unnamed: 1,TOTAL SALES,Unnamed: 3,Unnamed: 4,Unnamed: 5,Unnamed: 6,Unnamed: 7
-,,9065728.639999999,,,,,N Codes
-ItemSalesClassCode,(All),,,,,ItemCode,(Multiple Items)
-ItemCode,(All),,,,,ItemSalesClassCode,(All)
-,,,,,,,
-Sum of ExtendedLineAmount,,,,,,N Code Sales,
 Years (ScheduledShipDate),Months (ScheduledShipDate),ScheduledShipDate,Total,,,ScheduledShipDate,Total
 1900,Jan,,465850.23,,,1900-01-02 00:00:00,17822
 1900 Total,,,465850.23,,,2026-10-01 00:00:00,13339.02

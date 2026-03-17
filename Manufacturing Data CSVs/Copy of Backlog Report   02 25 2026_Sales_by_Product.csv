@@ -1,9 +1,3 @@
-ItemSalesClassCode,(All),1189209.3800000001,Unnamed: 3
-ScheduledShipDate,(All),,
-Months (ScheduledShipDate),Feb,272615.04000000004,Items at risk
-Years (ScheduledShipDate),2026,,
-,,,
-,,Data,
 ItemCode,ItemDescription,Sum of ExtendedLineAmount,Sum of OrderQuantity
 7153,URGO - VASHE 250 ml Flip Top 00313,272615.04000000004,145008
 7156,URGO - VASHE 475 ml Instill 00317,154960.32,30504
