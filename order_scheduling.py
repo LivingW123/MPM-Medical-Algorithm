@@ -96,12 +96,15 @@ def compute_revenue(df):
     """Bucket revenue and profit by ship month."""
     df["ship_month"] = df["earliest_ship_date"].dt.to_period("M")
 
-    monthly = df.groupby("ship_month").agg(
-        revenue=("ExtendedLineAmount", "sum"),
-        profit=("Profit", "sum"),
-        profit_estimated=("profit_estimated", "sum"),
-        order_count=("SONumber", "count"),
-    ).sort_index()
+    agg_dict = {
+        "revenue": ("ExtendedLineAmount", "sum"),
+        "profit": ("Profit", "sum"),
+        "order_count": ("SONumber", "count"),
+    }
+    if "profit_estimated" in df.columns:
+        agg_dict["profit_estimated"] = ("profit_estimated", "sum")
+
+    monthly = df.groupby("ship_month").agg(**agg_dict).sort_index()
 
     return monthly
 
@@ -123,8 +126,10 @@ def export_csv(df):
     print(f"\nCSV saved: {OUTPUT_CSV} ({len(out)} rows)")
 
 
-def plot_revenue(monthly):
+def plot_revenue(monthly, output_path=None):
     """Bar chart of monthly revenue and profit."""
+    if output_path is None:
+        output_path = OUTPUT_PNG
     fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(14, 10), sharex=True)
 
     months = [str(m) for m in monthly.index]
@@ -161,8 +166,8 @@ def plot_revenue(monthly):
     fig.suptitle(title, fontsize=12, fontweight="bold", y=0.98)
 
     plt.tight_layout(rect=[0, 0, 1, 0.96])
-    plt.savefig(OUTPUT_PNG, dpi=150)
-    print(f"Plot saved: {OUTPUT_PNG}")
+    plt.savefig(output_path, dpi=150)
+    print(f"Plot saved: {output_path}")
     plt.close()
 
 

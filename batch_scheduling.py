@@ -20,7 +20,7 @@ from datetime import datetime
 import os
 
 # ── Reuse data loading from order_scheduling ──────────────────────────────
-from order_scheduling import load_and_clean_data, join_data
+from order_scheduling import load_and_clean_data, join_data, compute_revenue, plot_revenue
 
 # ── Configuration ─────────────────────────────────────────────────────────
 TODAY = pd.Timestamp("2026-02-25")  # backlog report date
@@ -28,6 +28,7 @@ BASE = "Manufacturing Data CSVs"
 OUTPUT_DIR = "Automation Output"
 OUTPUT_CSV = os.path.join(OUTPUT_DIR, "batch_schedule_feasibility.csv")
 OUTPUT_PNG = os.path.join(OUTPUT_DIR, "batch_vs_naive_comparison.png")
+OUTPUT_REVENUE_PNG = os.path.join(OUTPUT_DIR, "batch_monthly_revenue_projection.png")
 
 # Cost model parameters (tunable)
 LATE_PENALTY_PER_DAY = 0.02       # 2% of line profit lost per day late
@@ -309,6 +310,10 @@ def main():
     metrics = compare(naive_df, batch_df)
     plot_comparison(naive_df, batch_df, metrics)
     export_batch_csv(batch_df)
+
+    # Monthly revenue projection for batch model
+    batch_monthly = compute_revenue(batch_df)
+    plot_revenue(batch_monthly, output_path=OUTPUT_REVENUE_PNG)
 
 
 if __name__ == "__main__":
